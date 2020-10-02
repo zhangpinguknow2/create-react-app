@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 
-class Square extends Component{
-  render() {
+function Square (props){
     return (
       <button 
         className='square'
-        onClick={()=>this.props.onClick()}>
-        {this.props.value}
+        onClick={props.onClick}>
+        {props.value}
       </button>
     )
-  }
 }
 
 class Board extends Component{
