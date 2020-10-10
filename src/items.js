@@ -4,7 +4,25 @@ class Items extends Component{
   constructor(props) {
     super(props)
     this.state={
-      list: ['a', 'b', 'c', 'd', 'e']
+      list: [{
+        id:1,
+        value:'a'
+      },{
+        id:2,
+        value:'b'
+      },{
+        id:3,
+        value:'c'
+      },{
+        id:4,
+        value:'d'
+      },{
+        id:5,
+        value:'e'
+      },{
+        id:6,
+        value:'f'
+      }]
     }
   }
   deleteItem(index) {
@@ -20,8 +38,8 @@ class Items extends Component{
       <ul>
         {list.map((item, index) => (
           <li
-            key={index}
-            onClick={this.deleteItem.bind(this,index)}>{item}</li>
+            key={item.id}
+            onClick={this.deleteItem.bind(this,index)}>{item.value}</li>
         ))}
       </ul>
     )
